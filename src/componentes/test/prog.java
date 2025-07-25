@@ -18,7 +18,10 @@ public class prog {
         double grossSalary = sc.nextDouble();
 
         Employee employee = new Employee(name, grossSalary);
-        SalaryService salaryService = new SalaryService();
+
+        taxservice taxservice = new taxservice();
+        PensionService pensionService = new PensionService();
+        SalaryService salaryService = new SalaryService(taxservice, pensionService);
 
         double netSalary = salaryService.netSalary(employee);
         System.out.println("salario: " +  netSalary);
