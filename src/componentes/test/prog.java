@@ -1,6 +1,7 @@
 package componentes.test;
 
 import componentes.entity.Employee;
+import componentes.service.BrazilTaxService;
 import componentes.service.PensionService;
 import componentes.service.SalaryService;
 import componentes.service.taxservice;
@@ -19,7 +20,7 @@ public class prog {
 
         Employee employee = new Employee(name, grossSalary);
 
-        taxservice taxservice = new taxservice();
+        taxservice taxservice = new BrazilTaxService();
         PensionService pensionService = new PensionService();
         SalaryService salaryService = new SalaryService(taxservice, pensionService);
 
