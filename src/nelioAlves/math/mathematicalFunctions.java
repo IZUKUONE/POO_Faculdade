@@ -6,7 +6,6 @@ public class mathematicalFunctions {
         double y = 4.0;
         double z = -5.0;
         double A, B, C;
-
 //      Raiz quadrada:
         A = Math.sqrt(x);
         B = Math.sqrt(y);
@@ -23,6 +22,7 @@ public class mathematicalFunctions {
         System.out.println(x + " elevado a " + y + " = " + A);
         System.out.println(x + " elevado ao quadrado = " + B);
         System.out.println("5 elevado ao quadrado = " + C);
+
 //      Valor absoluto:
         A = Math.abs(y);
         B = Math.abs(z);
