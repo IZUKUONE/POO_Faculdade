@@ -12,6 +12,12 @@ public class Product {
         this.price = price;
         this.quantity = quantity;
     }
+
+    public Product(String name, double price) {
+        this.name = name; // this = referencia o atributo do metodo, não o parametro
+        this.price = price;
+    }
+
     public void addProducts(int quantity) {
         this.quantity += quantity;
     }
