@@ -1,9 +1,10 @@
 package nelioAlves.advanceInPoo.entities;
 
 public class Product {
-    public String name; // atributo do metodo
-    public double price;
-    public int quantity;
+    private String name; // atributo do metodo
+    private double price;
+    private int quantity;
+
     public double totalValueInStock() {
         return price * quantity;
     }              //parameto
@@ -17,6 +18,14 @@ public class Product {
         this.name = name; // this = referencia o atributo do metodo, não o parametro
         this.price = price;
     }
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
 
     public void addProducts(int quantity) {
         this.quantity += quantity;
