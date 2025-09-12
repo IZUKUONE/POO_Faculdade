@@ -10,6 +10,7 @@ public class Program {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+        Account account;
 
         System.out.println("Enter account number:");
         int accountNumber = sc.nextInt();
@@ -19,18 +20,18 @@ public class Program {
         String number = sc.nextLine();
 
         System.out.println("Is there na initial deposit: (y/n)");
-        String deposit = sc.nextLine();
-        if (Objects.equals(deposit, "y")) {
-            System.out.println("Enter initial deposit value:");
-            double depositValue = sc.nextDouble();
+        char respose = sc.next().charAt(0);
 
-            Account account = new Account(accountNumber, number, depositValue);
-            System.out.println("Account data:");
+        if (respose == 'y') {
+            System.out.println("Enter initial deposit value: ");
+            double initialDepositValue = sc.nextDouble();
+            account = new Account(accountNumber, number, initialDepositValue);
+        }else {
+            account = new Account(accountNumber, number);
         }
-        Account account = new Account(accountNumber, number);
 
         System.out.println("Account data:");
-        ;
+
 
 
         sc.close();
