@@ -31,7 +31,10 @@ public class Account {
         this.name = name;
     }
 
-    public void setAccount_balance(double account_balance) {
-        this.account_balance = account_balance;
+    public void deposit(double amount) {
+        account_balance += amount;
+    }
+    public void withdraw(double amount) {
+        account_balance -= amount + 5.0;
     }
 }
