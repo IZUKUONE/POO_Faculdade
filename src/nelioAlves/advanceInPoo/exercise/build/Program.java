@@ -30,8 +30,9 @@ public class Program {
             account = new Account(accountNumber, number);
         }
 
+        System.out.println();
         System.out.println("Account data:");
-
+        System.out.println(account);
 
 
         sc.close();
