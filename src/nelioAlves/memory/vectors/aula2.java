@@ -14,7 +14,7 @@ public class aula2 {
 
         Product[] vector = new Product[n];
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < vector.length; i++) {
             sc.nextLine();
             String name = sc.next();
             int price = sc.nextInt();
@@ -22,11 +22,11 @@ public class aula2 {
         }
 
         double soma = 0.0;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < vector.length; i++) {
             soma += vector[i].getPrice();
         }
 
-        double media = soma / n;
+        double media = soma / vector.length;
         System.out.println("Media: " + media);
 
         sc.close();
