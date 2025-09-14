@@ -3,7 +3,6 @@ package nelioAlves.advanceInPoo.exercise.build;
 import nelioAlves.advanceInPoo.exercise.entities.Account;
 
 import java.util.Locale;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Program {
