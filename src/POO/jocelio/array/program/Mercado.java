@@ -41,41 +41,43 @@ public class Mercado {
 
         double totalEstoque = 0;
 
-        for (int i = 0; i < produtos.length; i++) {
-            totalEstoque += produtos[i].getValorTotal();
+        Produto maisCaro = produtos[0];
+        Produto maisBarato = produtos[0];
+        Produto maisUnidades = produtos[0];
+        Produto menosUnidades = produtos[0];
+        Produto maisValioso = produtos[0];
+        Produto menosValioso = produtos[0];
+
+        for (Produto p : produtos) {
+            totalEstoque += p.getValorTotal();
+
+            if (p.getValorUnitario() > maisCaro.getValorUnitario()) {
+                maisCaro = p;
+            }
+            if (p.getValorUnitario() < maisBarato.getValorUnitario()) {
+                maisBarato = p;
+            }
+            if (p.getQuantidade() > maisUnidades.getQuantidade()) {
+                maisUnidades = p;
+            }
+            if (p.getQuantidade() < menosUnidades.getQuantidade()) {
+                menosUnidades = p;
+            }
+            if (p.getValorTotal() > maisValioso.getValorTotal()) {
+                maisValioso = p;
+            }
+            if (p.getValorTotal() < menosValioso.getValorTotal()) {
+                menosValioso = p;
+            }
         }
 
-        System.out.println("\nThe total value of your stock is: R$ " + totalEstoque);
-
-
-
-
-
-/*
-        double valorTotal = 0;
-        System.out.println("YOUR MARKET INVENTORY");
-
-        System.out.print("tell me the name of the product:");
-        String name = sc.nextLine();
-        System.out.print("tell me the product code:");
-        String codigo = sc.nextLine();
-        System.out.print("let me know the quantity of the product:");
-        int quantidade = sc.nextInt();
-        System.out.print("tell me the product unit:");
-        int unidade = sc.nextInt();
-        System.out.print("Please inform me the unit price of the product:");
-        double valorUnitario = sc.nextDouble();
-
-        Produto p = new Produto(name, codigo, quantidade, unidade, valorUnitario);
-
-        valorTotal = quantidade * valorUnitario;
-
-        System.out.println("Your total price is: " + valorTotal);
-
-
-*/
-
-
+        System.out.println("Most expensive product: " + maisCaro);
+        System.out.println("Cheapest product: " + maisBarato);
+        System.out.println("Product with most units: " + maisUnidades);
+        System.out.println("Product with least units: " + menosUnidades);
+        System.out.println("Most valuable product in stock: " + maisValioso);
+        System.out.println("Least valuable product in stock: " + menosValioso);
+        System.out.println("Total stock value: R$ " + totalEstoque);
 
     }
 }

@@ -39,4 +39,11 @@ public class Produto {
     public double getValorUnitario() {
         return valorUnitario;
     }
+
+    public String toString() {
+        return nome
+                + ", $ " + String.format("%.2f", valorUnitario)
+                + ", " + quantidade + " units"
+                + ", Total: $ " + String.format("%.2f", getValorTotal());
+    }
 }
