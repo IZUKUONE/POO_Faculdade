@@ -1,7 +1,5 @@
 package nelioAlves.memory.vectors.exercise.program;
 
-import nelioAlves.memory.vectors.exercise.entities.Person;
-
 import java.util.Locale;
 import java.util.Scanner;
 
