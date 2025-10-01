@@ -2,23 +2,52 @@ package POO.jocelio.OO.revisao.questao06.entities;
 
 public class Partido {
     public int codigo;
-    public int filiado;
+    public String descricao;
     public String presidente;
-    public int assinatura;
-    public int votosMinimos;
+    public int filiados;
+    public int assinaturas;
+    public int numeroDeAssinaturasMinimas;
 
-    public Partido(int codigo, int filiado, String presidente, int assinatura) {
+    public Partido(int codigo, String descricao, String presidente, int filiados, int assinaturas, int numeroDeAssinaturasMinimas) {
         this.codigo = codigo;
-        this.filiado = filiado;
+        this.descricao = descricao;
         this.presidente = presidente;
-        this.assinatura = assinatura;
+        this.filiados = filiados;
+        this.assinaturas = assinaturas;
+        this.numeroDeAssinaturasMinimas = numeroDeAssinaturasMinimas;
     }
 
-    public boolean aprovado(int votosMinimos) {
-        return assinatura >= votosMinimos;
+    public String aprovado(){
+        return (assinaturas >= 491656) ? "sim" : "não";
     }
 
-    public boolean aprovado(){
-        return assinatura >= 491656;
+    public String aprovado(int numeroDeAssinaturasMinimas){
+        return (assinaturas >= numeroDeAssinaturasMinimas) ? "Sim" : "Não";
     }
+
+    public String classificacao(int numeroDeAssinaturasMinimas){
+        double indice = ((double) assinaturas / numeroDeAssinaturasMinimas);
+        //double indice = ((double) assinaturas / numeroDeAssinaturasMinimas);
+
+        if (indice >= 75) {
+            return "Insatisfatorio";
+        } else if (indice >= 50) {
+            return "Ruim";
+        } else if (indice >= 25) {
+            return "Muito ruim";
+        } else {
+            return "Péssimo";
+        }
+    }
+
+    public String mostrarDados(){
+        return "Num: " + codigo
+                +" Nome: " + descricao
+                +" Presidente: " + presidente
+                +" Filiados: " + filiados
+                +" Assinaturas: " + assinaturas
+                +" Aprovado: " + aprovado(numeroDeAssinaturasMinimas)
+                +" Classificação: " + classificacao(numeroDeAssinaturasMinimas);
+    }
+
 }
