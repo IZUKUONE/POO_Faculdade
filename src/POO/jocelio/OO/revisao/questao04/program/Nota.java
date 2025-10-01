@@ -1,0 +1,45 @@
+package POO.jocelio.OO.revisao.questao04.program;
+
+import POO.jocelio.OO.revisao.questao04.entitities.Aluno;
+
+import java.util.Scanner;
+
+public class Nota {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Informe a qunatidade de alunos: ");
+        int quantidade = sc.nextInt();
+        Aluno[] alunos = new Aluno[quantidade];
+
+        for (int i = 0; i < alunos.length; i++) {
+            System.out.println("Informe o codigo do aluno: ");
+            int codigo = sc.nextInt();
+            System.out.println("Informe o nome do aluno: " + (i + 1) + ":");
+            String nome = sc.next();
+            System.out.println("Informe a nota 1 do aluno: " + (i + 1) + ":");
+            double nota = sc.nextDouble();
+            System.out.println("Informe a nota 2 do aluno: " + (i + 1) + ":");
+            double nota2 = sc.nextDouble();
+            System.out.println("Informe a nota 3 do aluno: " + (i + 1) + ":");
+            double nota3 = sc.nextDouble();
+
+            alunos[i] = new Aluno(codigo, nome, nota, nota2, nota3);
+        }
+
+        /*for (int i = 0; i < alunos.length; i++) {
+            System.out.println("Informe o peso 1");
+            double peso1 = sc.nextDouble();
+            System.out.println("Informe o peso 2");
+            double peso2 = sc.nextDouble();
+            System.out.println("Informe o peso 3");
+            double peso3 = sc.nextDouble();
+
+            alunos[i].media(peso1, peso2, peso3);
+        }*/
+
+        for (int i = 0; i < alunos.length; i++) {
+            System.out.println(alunos[i].toString());
+        }
+    }
+}
