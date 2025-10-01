@@ -1,10 +1,10 @@
 package POO.jocelio.OO.revisao.questao03.entities;
 
 public class Cadidatos {
-    int numero;
-    String nome;
-    int votos;
-    int votosMinimos;
+    public int numero;
+    public String nome;
+    public int votos;
+    public int votosMinimos;
 
     public Cadidatos(int numero, int votos, String nome, int votosMinimos) {
         this.numero = numero;
