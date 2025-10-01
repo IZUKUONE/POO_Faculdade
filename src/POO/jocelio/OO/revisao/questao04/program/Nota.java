@@ -27,17 +27,6 @@ public class Nota {
             alunos[i] = new Aluno(codigo, nome, nota, nota2, nota3);
         }
 
-        /*for (int i = 0; i < alunos.length; i++) {
-            System.out.println("Informe o peso 1");
-            double peso1 = sc.nextDouble();
-            System.out.println("Informe o peso 2");
-            double peso2 = sc.nextDouble();
-            System.out.println("Informe o peso 3");
-            double peso3 = sc.nextDouble();
-
-            alunos[i].media(peso1, peso2, peso3);
-        }*/
-
         for (int i = 0; i < alunos.length; i++) {
             System.out.println(alunos[i].toString());
         }
@@ -54,8 +43,14 @@ public class Nota {
                 menorMedia = alunos[i];
             }
         }
+        double somaMedias = 0;
+        for (int i = 0; i < alunos.length; i++) {
+            somaMedias += alunos[i].media();
+        }
+        double mediaDasMedias = somaMedias / alunos.length;
 
         System.out.println("Aluno com maior média é: " + maiorMedia.nome + " com " + maiorMedia.media());
         System.out.println("Aluno com menor média é : " + menorMedia.nome + " com " + menorMedia.media());
+        System.out.println("Média das médias: " + mediaDasMedias);
     }
 }
