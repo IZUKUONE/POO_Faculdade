@@ -41,5 +41,21 @@ public class Nota {
         for (int i = 0; i < alunos.length; i++) {
             System.out.println(alunos[i].toString());
         }
+
+        Aluno maiorMedia = alunos[0];
+        for (int i = 1; i < alunos.length; i++) {
+            if (alunos[i].media() > maiorMedia.media()){
+                maiorMedia = alunos[i];
+            }
+        }
+        Aluno menorMedia = alunos[0];
+        for (int i = 1; i < alunos.length; i++) {
+            if (alunos[i].media() < menorMedia.media()){
+                menorMedia = alunos[i];
+            }
+        }
+
+        System.out.println("Aluno com maior média é: " + maiorMedia.nome + " com " + maiorMedia.media());
+        System.out.println("Aluno com menor média é : " + menorMedia.nome + " com " + menorMedia.media());
     }
 }
