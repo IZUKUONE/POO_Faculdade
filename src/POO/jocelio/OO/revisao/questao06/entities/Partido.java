@@ -7,7 +7,7 @@ public class Partido {
     public int filiados;
     public int assinaturas;
     public int numeroDeAssinaturasMinimas;
-
+// triste
     public Partido(int codigo, String descricao, String presidente, int filiados, int assinaturas, int numeroDeAssinaturasMinimas) {
         this.codigo = codigo;
         this.descricao = descricao;
