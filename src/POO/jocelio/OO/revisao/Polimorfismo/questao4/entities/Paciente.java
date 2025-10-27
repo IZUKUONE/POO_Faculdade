@@ -31,8 +31,9 @@ public class Paciente {
         return debito;
     }
 
-    public void usarServico(float valorServico){
+    public float usarServico(float valorServico){
         this.debito += valorServico;
+        return valorServico;
     }
 
     public void pagarServico(float valorServico){
