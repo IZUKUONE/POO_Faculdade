@@ -1,11 +1,11 @@
 package POO.jocelio.OO.revisao.Polimorfismo.questao4.entities;
 
 public class Paciente {
-    private String codigo;
+    private int codigo;
     private String nome;
     private float debito;
 
-    public Paciente(String codigo, String nome, float debito) {
+    public Paciente(int codigo, String nome, float debito) {
         this.codigo = codigo;
         this.nome = nome;
         this.debito = debito;
@@ -15,11 +15,11 @@ public class Paciente {
         this.nome = nome;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
-    public String getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 

@@ -3,7 +3,7 @@ package POO.jocelio.OO.revisao.Polimorfismo.questao4.entities;
 public class PacienteParticular extends Paciente {
     private int desconto;
 
-    public PacienteParticular(String codigo, String nome, float debito) {
+    public PacienteParticular(int codigo, String nome, float debito, int desconto) {
         super(codigo, nome, debito);
         this.desconto = 0;
     }

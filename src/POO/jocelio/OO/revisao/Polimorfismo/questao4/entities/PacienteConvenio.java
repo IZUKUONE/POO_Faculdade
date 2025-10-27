@@ -4,7 +4,7 @@ public class PacienteConvenio extends Paciente{
     private String convenio;
     private float limite;
 
-    public PacienteConvenio(String codigo, String nome, float debito) {
+    public PacienteConvenio(int codigo, String nome, float debito, String convenio, float limite) {
         super(codigo, nome, debito);
         this.limite = 0;
         this.convenio = "";
