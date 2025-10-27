@@ -53,7 +53,7 @@ public class Produto {
         return this.quantidade >= quantidade;
     }
 
-    public void baixar(){
+    public void baixar(float quantidade){
         if (this.validarSaldo(quantidade)){
             this.quantidade -= quantidade;
         }else {
