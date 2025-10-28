@@ -1,6 +1,6 @@
 package POO.jocelio.OO.SegundaProva.questao02.entities;
 
-public class Cartao {
+public abstract class Cartao {
     private String numeroDoCartao;
     private String titular;
     private double limiteDeCredito;

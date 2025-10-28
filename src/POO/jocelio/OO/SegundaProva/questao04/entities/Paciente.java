@@ -1,6 +1,6 @@
 package POO.jocelio.OO.SegundaProva.questao04.entities;
 
-public class Paciente {
+public abstract class Paciente {
     private int codigo;
     private String nome;
     private float debito;

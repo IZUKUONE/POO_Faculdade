@@ -1,6 +1,6 @@
 package POO.jocelio.OO.SegundaProva.questao03.entities;
 
-public class Produto {
+public abstract class Produto {
     private int codigo;
     private String nome;
     private float quantidade;
