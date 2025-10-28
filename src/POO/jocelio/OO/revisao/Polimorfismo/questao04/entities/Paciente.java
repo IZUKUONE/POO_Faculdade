@@ -12,6 +12,7 @@ public class Paciente {
     }
 
     public void setNome(String nome) {
+
         this.nome = nome;
     }
 
@@ -32,8 +33,7 @@ public class Paciente {
     }
 
     public float usarServico(float valorServico){
-        this.debito += valorServico;
-        return valorServico;
+        return this.debito += valorServico;
     }
 
     public void pagarServico(float valorServico){
