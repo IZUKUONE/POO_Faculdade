@@ -13,11 +13,11 @@ public abstract class Produto {
         this.custo = custo;
     }
 
-    public double getQuantidade() {
+    public float getQuantidade() {
         return quantidade;
     }
 
-    public double getCusto() {
+    public float getCusto() {
         return custo;
     }
 
