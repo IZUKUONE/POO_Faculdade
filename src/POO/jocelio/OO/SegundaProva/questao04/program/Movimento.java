@@ -24,12 +24,12 @@ public class Movimento {
         System.out.println("João usa serviço de R$ 100");
         paciente1.usarServico(100);
         System.out.println("Maria usa serviço de R$ 200");
-        paciente2.usarServico();
+        paciente2.usarServico(200);
 
         System.out.println("João usa serviço de R$ 200");
         paciente1.usarServico(200);
         System.out.println("Maria usa serviço de R$ 301");
-        paciente2.usarServico();
+        paciente2.usarServico(301);
 
         System.out.println("\nPAGAMENTOS:");
         System.out.println("João paga R$ 300");
