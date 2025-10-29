@@ -5,23 +5,47 @@ import POO.jocelio.OO.SegundaProva.questao05.entities.ContaReceber;
 
 public class movimentoContaPagarReceber {
     public static void main(String[] args) {
-        ContaReceber conta1 = new ContaReceber(1, "mercado Total", 500);
-        ContaPagar conta2 = new ContaPagar(2, "Distribuidor ideal", 400);
+        ContaReceber conta1 = new ContaReceber(1, "Supermercado Total", 500);
+        ContaPagar conta2 = new ContaPagar(2, "Distribuidor Ideal", 400);
+
+        System.out.println("=== Dados Iniciais ===");
+        conta1.mostrarDados();
+        System.out.println();
+        conta2.mostrarDados();
+        System.out.println();
 
         conta1.vender(600);
-        conta2.pagar(400);
-        System.out.println("\n=== Após Venda e Compra ===");
-        System.out.println("Conta a Receber: " + conta1.getCodigo() + " - " + conta1.getNome() + " - Saldo: " + conta1.getSaldo());
-        System.out.println("Conta a Pagar: " + conta2.getCodigo() + " - " + conta2.getNome() + " - Saldo: " + conta2.getSaldo());
+        conta2.comprar(400);
+        System.out.println("=== Após Venda R$ 600 e Compra R$ 400 ===");
+        conta1.mostrarDados();
+        System.out.println();
+        conta2.mostrarDados();
+        System.out.println();
 
-        conta1.vender(100);
+        conta1.receber(100);
         conta2.pagar(300);
-        System.out.println("\n=== Após Receber e Pagar ===");
-        System.out.println("Conta a Receber: " + conta1.getCodigo() + " - " + conta1.getNome() + " - Saldo: " + conta1.getSaldo());
-        System.out.println("Conta a Pagar: " + conta2.getCodigo() + " - " + conta2.getNome() + " - Saldo: " + conta2.getSaldo());
+        System.out.println("=== Após Receber R$ 100 e Pagar R$ 300 ===");
+        conta1.mostrarDados();
+        System.out.println();
+        conta2.mostrarDados();
+        System.out.println();
 
-        conta1.vender(1500);
+        conta1.receber(1500);
         conta2.pagar(600);
-        System.out.println("Conta a Receber: " + conta1.getCodigo() + " - " + conta1.getNome() + " - Saldo: " + conta1.getSaldo());
-        System.out.println("Conta a Pagar: " + conta2.getCodigo() + " - " + conta2.getNome() + " - Saldo: " + conta2.getSaldo());}
+        System.out.println("=== Após Receber R$ 1500 e Pagar R$ 600 ===");
+        conta1.mostrarDados();
+        System.out.println();
+        conta2.mostrarDados();
+        System.out.println();
+
+        float saldoReceber = conta1.getSaldo();
+        float saldoPagar = Math.abs(conta2.getSaldo());
+        float situacaoEmpresa = saldoReceber - saldoPagar;
+
+        System.out.println("=== SITUAÇÃO ATUAL DA EMPRESA ===");
+        System.out.println("Saldo a Receber: R$ " + saldoReceber);
+        System.out.println("Saldo a Pagar: R$ " + saldoPagar);
+        System.out.println("Saldo da Empresa (A Receber - A Pagar): R$ " + situacaoEmpresa);
+    }
+
 }

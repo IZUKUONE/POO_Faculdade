@@ -5,15 +5,15 @@ public class ContaPagar extends Conta{
         super(codigo, nome, -Math.abs(saldo));
     }
 
-    public void pagar(float valorRecebido){
-        if(this.getSaldo() > valorRecebido){
-            super.ajustarSaldo(valorRecebido);
+    public void pagar(float valor){
+        if(Math.abs(this.getSaldo()) >= valor){
+            super.ajustarSaldo(valor);
         }else {
             System.out.println("Valor insuficiente");
         }
     }
 
-    public float comprar (float valorVenda){
+    public float comprar(float valorVenda) {
         return super.ajustarSaldo(-valorVenda);
     }
 }

@@ -6,16 +6,16 @@ public class ContaReceber extends Conta {
         super(codigo, nome, Math.abs(saldo));
     }
 
-    public void receber(float valorRecebido) {
-        if(valorRecebido < this.getSaldo()) { // lembra do get corno
-            super.ajustarSaldo(-valorRecebido);
+    public void receber(float valor) {
+        if(valor < this.getSaldo()) { // lembra do get corno
+            super.ajustarSaldo(Math.abs(valor));
         }else {
             System.out.println("Valor incorreto");
         }
     }
 
-    public float vender(float valorVenda){
-        return super.ajustarSaldo(valorVenda);
+    public float vender(float valor){
+        return super.ajustarSaldo(valor);
     }
 
     public void mostrarDados() {
