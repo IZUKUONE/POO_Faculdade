@@ -9,7 +9,8 @@ public abstract class Cartao {
     public Cartao(String numeroDoCartao, String titular, double limiteDeCredito) {
         this.numeroDoCartao = numeroDoCartao;
         this.titular = titular;
-        this.limiteDeCredito = 0;
+        this.limiteDeCredito = limiteDeCredito;
+        this.saldoDevedor = 0;
     }
 
     public String getNumeroDoCartao() {
@@ -35,7 +36,7 @@ public abstract class Cartao {
     }
 
     public boolean autorizar(double valorCompra){
-        if (valorCompra + saldoDevedor <= limiteDeCredito) {
+        if ((valorCompra + saldoDevedor) <= limiteDeCredito) {
             saldoDevedor += valorCompra;
             return true;
         }else {

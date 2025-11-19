@@ -3,7 +3,7 @@ package POO.jocelio.OO.SegundaProva.questao02.entities;
 public class CartaoEspecial extends Cartao{
     private double valorMinimo;
 
-    public CartaoEspecial(String numeroDoCartao, String titular, double limiteDeCredito, double v) {
+    public CartaoEspecial(String numeroDoCartao, String titular, double limiteDeCredito, double valorMinimo) {
         super(numeroDoCartao, titular, limiteDeCredito);
         this.valorMinimo = limiteDeCredito;
     }
@@ -37,5 +37,4 @@ public class CartaoEspecial extends Cartao{
         super.mostrarDados();
         System.out.println("\nValor minimo: " + valorMinimo);
     }
-
 }
