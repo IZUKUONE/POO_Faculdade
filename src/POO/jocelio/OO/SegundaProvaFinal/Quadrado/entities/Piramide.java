@@ -21,7 +21,7 @@ public class Piramide extends Quadrado {
     }
 
     public float alturaDoLado(){
-        return (float) Math.sqrt(super.getLado()/2 + Math.pow(altura, 2));
+        return (float) Math.sqrt(Math.pow(super.getLado()/2, 2) + Math.pow(altura, 2));
     }
 
     public float areaLateral(){
@@ -39,8 +39,8 @@ public class Piramide extends Quadrado {
     }
 
     public void mostrarDados() {
-        System.out.println("lado" + getLado() + "Altura" + altura + "Area da Base" + super.area()
-        + "Perimetro da base: " + super.perimetro() + "Altura do lado: " + alturaDoLado()
-        + "Area lateral: " + areaLateral() + "Area: " + area() + "Volume: " + volume());
+        System.out.println("lado: " + getLado() + "\nAltura: " + altura + "\nArea da Base: " + super.area()
+        + "\nPerimetro da base: " + super.perimetro() + "\nAltura do lado: " + alturaDoLado()
+        + "\nArea lateral: " + areaLateral() + "\nArea: " + area() + "\nVolume: " + volume());
     }
 }
